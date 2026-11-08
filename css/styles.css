@@ -379,8 +379,30 @@ body.ar .invite-text, body.ar .story-text, body.ar .gift-text { font-size: 1.35r
 .song-play-btn.playing .play-triangle::before { left: 0; }
 .song-play-btn.playing .play-triangle::after { right: 0; }
 
+.childhood-photo {
+  width: min(70vw, 300px);
+  margin: 2.4rem auto 0;
+  padding: 12px;
+  background: linear-gradient(145deg, #fff, var(--cream-deep));
+  border-radius: 22px;
+  border: 1px solid var(--gold-soft);
+  box-shadow: 0 16px 38px rgba(42,26,18,.18);
+  transform: rotate(-2deg);
+  transition: transform .4s ease;
+}
+.childhood-photo:hover { transform: rotate(0deg) scale(1.02); }
+.childhood-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  border: 2px solid var(--gold);
+}
+.childhood-photo.placeholder { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; }
+.childhood-photo.placeholder::after { content: "👶 childhood photo"; font-family: var(--ui); color: var(--brown-light); }
+.childhood-photo.placeholder img { display: none; }
+
 .tagline {
-  margin-top: 2rem;
+  margin-top: 1.8rem;
   font-family: var(--script);
   font-size: 1.8rem;
   color: var(--brown-light);
