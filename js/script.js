@@ -21,7 +21,7 @@ const CONFIG = {
    2. LANGUAGE TOGGLE (English <-> Arabic)
    ============================================================ */
 const langToggle = document.getElementById('langToggle');
-let isArabic = false;
+let isArabic = true;   // Arabic is the default language
 
 function applyLanguage() {
   document.body.classList.toggle('ar', isArabic);
@@ -35,6 +35,9 @@ function applyLanguage() {
   });
 }
 langToggle.addEventListener('click', () => { isArabic = !isArabic; applyLanguage(); });
+
+// Apply the default language (Arabic) on load
+applyLanguage();
 
 /* ============================================================
    3. MUSIC PLAYER
